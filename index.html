@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -86,3 +87,128 @@ We also provided a central forum and wiki for our services.</p><h2>License</h2>
   
 </body>
 </html>
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+  <title>Blackgate Research</title> 
+  
+  <!-- Framework CSS --> 
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" /> 
+    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" /> 
+    <!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]--> 
+ 
+    <!-- Import fancy-type plugin. --> 
+    <link rel="stylesheet" href="css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+</head> 
+ 
+<body> 
+  <div class="container"> 
+    
+    <hr /> 
+    <div id="subheader" class="span-24 last"> 
+      <h1 class="alt">Blackgate Research</h3> 
+    </div> 
+          
+    <hr /> 
+    <div class="span-17 colborder" id="content"> 
+      <p> 
+        <img class="left" src="images/bgr-square.png" alt="bgr" />
+        <br/>
+        Blackgate Research is software engineering house and technology incubator.
+        <br/>
+        We develop web services and bespoke web sites and <a href="http://github.com/BlackgateResearch">release</a> our frameworks, software libraries and utilities under the <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> open-source licence.
+        <br/>
+        We publish technical articles and papers both in <a href="http://blog.blackgateresearch.com">blog</a> form and in more formal methods (released in PDF).
+        <br/>
+        We also provided a central forum and <a href="http://wiki.blackgateresearch.com">wiki</a> for our services.
+      </p> 
+      
+      <hr /> 
+      <div class="span-8 colborder"> 
+        <h4 class="prepend-5"><a href="http://github.com/oatman">Tristram Oaten</a></h4> 
+        <p> 
+          <img class="left" src="http://www.gravatar.com/avatar/054187c51ba0ca1e221a581739b51568.png" alt="Tris" />
+          Tris is a Software Engineer working in London, UK. He loves solving complex problems with simple solutions, and with Python as his language of choice, often can. <br> When not writing about himself in the third person, he can be found tinkering with his guitar and Linux kernel in equal measure.
+        </p>      
+      </div> 
+      
+      <div class="span-8 last"> 
+        <h4 class="prepend-5"><a href="http://github.com/deadlight">Karl Williams</a></h4> 
+        <p>
+          <img class="left" src="http://gravatar.com/avatar/0c026e0d2bd694ab60a0860ba1394785" alt="Tris" />
+          Officially, Karl is a web developer working for both a publishing company and as a coder of fortune.
+
+          When not working on web projects, Karl is an aspiring mad-scientist; his interests include hobby robotics and electronics, victorian-science inspired physics demonstrations and software as a solution to the world’s ills.
+
+          He doesn’t believe that a gentleman can own too many hats or ties.
+        </p>      
+      </div> 
+    </div> 
+    
+    <div class="span-6 last" id="sidebar"> 
+      
+       <script language="JavaScript">
+       $(document).ready(function() {
+          url = "http://github.com/api/v2/json/repos/show/blackgateresearch/"
+          $.getJSON(url+"?callback=?", function(data) {
+            box_data = "";
+            length = data.repositories.length-1;
+            for (i=length; i>length-3; i--) {
+              box_data = box_data + '<div class="box">' 
+              + '<a href="' + data.repositories[i].url + '" class="quiet">' + data.repositories[i].name + '</a>'
+              + '<div class="quiet">'+ data.repositories[i].description + '</div>'
+              + '<div class="quiet">Updated: '+ data.repositories[i].pushed_at.split(" ")[0] + '</div>'
+              
+              + '</div>';
+             }
+            $('#project').html('<h3 class="caps">Projects</h3>' + box_data);
+          });
+        });
+        </script>
+      
+      <div id="project"> 
+        <h3 class="caps">Projects</h3> 
+       
+        
+        <div class="quiet">Loading...</div>
+      </div>
+        
+      <div class="prepend-top" id="partners"> 
+        <h3 class="caps">Partners</h3> 
+ 
+         <div class="box"> 
+          <a href="http://andenmusic.com/" class="quiet">Anden Music</a> 
+          <div class="quiet">Comprehensive, client-oriented music production</div> 
+        </div> 
+ 
+ 
+      </div> 
+      
+    </div> 
+    
+    <hr /> 
+    <div id="footer"> 
+      <!--<div class="span-5 colborder"> 
+        <ul> 
+          <li><a class="quiet" href="#">Read our blog</a></li> 
+          <li><a class="quiet" href="#">About us</a></li> 
+          <li><a class="quiet" href="#">Visit the Support Forums</a></li> 
+          <li><a class="quiet" href="#">Submit a Bug</a></li> 
+          <li><a class="quiet" href="#">Sign up!</a></li> 
+        </ul> 
+      </div> -->
+      
+      <div class="prepend-top push-3 span-8 last"> 
+        <span class="quiet">Copyright &copy; Blackgate Research 2010</span> <!--| 
+        <a href="#" class="quiet">Privacy Policy</a> | 
+        <a href="#" class="quiet">Security Policy</a> -->
+      </div> 
+    </div> 
+  </div> 
+</body> 
+</html>
+>>>>>>> master
