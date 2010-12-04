@@ -11,7 +11,8 @@
     <!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]--> 
  
     <!-- Import fancy-type plugin. --> 
-    <link rel="stylesheet" href="css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" /> 
+    <link rel="stylesheet" href="css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
 </head> 
  
 <body> 
@@ -60,14 +61,30 @@
     
     <div class="span-6 last" id="sidebar"> 
       
+       <script language="JavaScript">
+       $(document).ready(function() {
+          url = "http://github.com/api/v2/json/repos/show/blackgateresearch/"
+          $.getJSON(url+"?callback=?", function(data) {
+            box_data = "";
+            length = data.repositories.length-1;
+            for (i=length; i>length-3; i--) {
+              box_data = box_data + '<div class="box">' 
+              + '<a href="' + data.repositories[i].url + '" class="quiet">' + data.repositories[i].name + '</a>'
+              + '<div class="quiet">'+ data.repositories[i].description + '</div>'
+              + '<div class="quiet">Updated: '+ data.repositories[i].pushed_at.split(" ")[0] + '</div>'
+              
+              + '</div>';
+             }
+            $('#project').html('<h3 class="caps">Projects</h3>' + box_data);
+          });
+        });
+        </script>
+      
       <div id="project"> 
         <h3 class="caps">Projects</h3> 
+       
         
-        <div class="box"> 
-          <a href="http://github.com/BlackgateResearch/gmr" class="quiet">Game Master Radio</a> 
-          <div class="quiet">GMR Music Radio framework</div> 
-        </div> 
-        <h4 class="prepend-5"><em><a href="http://github.com/BlackgateResearch">more</a></em></h4>
+        <div class="quiet">Loading...</div>
       </div>
         
       <div class="prepend-top" id="partners"> 
