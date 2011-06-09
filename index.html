@@ -39,7 +39,7 @@
       
       <hr /> 
       <div class="span-8 colborder"> 
-        <h4 class="prepend-5"><a href="http://github.com/oatman">Tristram Oaten</a></h4> 
+        <h4 class="prepend-5"><a href="http://namtao.com">Tristram Oaten</a></h4> 
         <p> 
           <img class="left" src="http://www.gravatar.com/avatar/054187c51ba0ca1e221a581739b51568.png" alt="Tris" />
           Tris is a Software Engineer working in London, UK. He loves solving complex problems with simple solutions, and with Python as his language of choice, often can. <br> When not writing about himself in the third person, he can be found tinkering with his guitar and Linux kernel in equal measure.
@@ -67,7 +67,7 @@
           $.getJSON(url+"?callback=?", function(data) {
             box_data = "";
             length = data.repositories.length-1;
-            for (i=length; i>length-3; i--) {
+            for (i=length; i>length-4; i--) {
               box_data = box_data + '<div class="box">' 
               + '<a href="' + data.repositories[i].url + '" class="quiet">' + data.repositories[i].name + '</a>'
               + '<div class="quiet">'+ data.repositories[i].description + '</div>'
@@ -87,17 +87,6 @@
         <div class="quiet">Loading...</div>
       </div>
         
-      <div class="prepend-top" id="partners"> 
-        <h3 class="caps">Partners</h3> 
- 
-         <div class="box"> 
-          <a href="http://andenmusic.com/" class="quiet">Anden Music</a> 
-          <div class="quiet">Comprehensive, client-oriented music production</div> 
-        </div> 
- 
- 
-      </div> 
-      
     </div> 
     
     <hr /> 
